@@ -1,0 +1,40 @@
+
+    
+    <!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Događaj nad listom elemenata</title>
+	
+		
+	</head>
+
+	<body>
+		<h1>Padajuća lista</h1>
+    <form>
+        <label for="lista">Izaberite omiljeni VW model: </label>
+        <select id="lista">
+            <option value="jedan">Polo</option>
+            <option value="dva">Golf</option>
+            <option value="tri">Pasat</option>
+            <option value="cetiri">Jeta</option>
+        </select>
+    </form>
+    <p>Izabrali ste: </p>
+    <div id="izbor"></div>
+		<script type="text/javascript">
+             function izbor(event) {
+            var lista = document.getElementById('lista');
+            var index = lista.selectedIndex;
+            var opcije = lista.options;
+            var divIzbor = document.getElementById('izbor');
+            divIzbor.innerHTML = opcije[index].text;
+        }
+            
+        var elementLista = document.getElementById('lista');
+        elementLista.addEventListener('change', izbor); 
+   
+		</script>
+	</body>
+</html>
